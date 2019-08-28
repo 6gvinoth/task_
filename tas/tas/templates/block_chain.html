@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<button type="button" onclick="location.href='/create'"class="btn btn-primary">Add</button>
+   <table class="table table-bordered">
+    <thead>
+      <tr class="Default" align="right">
+        <th >Prev_Hash</th>
+        <th >Hash</th>
+<th >Data</th>
+             
+             
+          </tr>
+    </thead>
+    <tbody>
+
+{% for i in range(lenth) %}
+      <tr class="success">
+
+        <td>{{data["blocks"][""]["prev_hash"]}}</td>
+        <td>{{data["block_hashes_"][i]}}</td>
+        <td>{{data["blocks"][i]["transactions"]}}</td>
+        
+        
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<button type="button" onclick="location.href='/create'"class="btn btn-primary">Add</button>
+   <table class="table table-bordered">
+    <thead>
+      <tr class="Default" align="right">
+       
+       
+        <th >EMP-ID</th>
+        <th >NAME</th>
+             <th >DOB</th>
+             <th>EMAIL</th>
+             <th>PH</th>
+             <th>Download_CV</th>
+<th >P-Hash</th>
+       <th >Hash</th>
+             
+          </tr>
+    </thead>
+    <tbody>
+
+{% for key, value in data.items(): %}
+      <tr class="success">
+
+        <td>{{key}}</td>
+        <td>{{value["name"]}}</td>
+        <td>{{value["dob"]}}</td>
+        <td>{{value["email"]}}</td>
+        <td>{{value["ph"]}}</td>
+        
+        <td><a href="/file?name={{key}}.pdf">Download</a></td>
+        <td>{{r[key]["prev_hash"]}}</td>
+
+<td>{{h[key]}}</td>
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+

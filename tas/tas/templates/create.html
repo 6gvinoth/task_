@@ -1,0 +1,43 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<form method="post" action="/create_form" enctype="multipart/form-data">
+<div class="form-group">
+  <label >EMP-ID</label>
+  <input name="id" type="text" class="form-control" >
+</div>
+<div class="form-group">
+  <label >Name</label>
+  <input name="name" type="text" class="form-control" >
+</div>
+<div class="form-group">
+  <label >DOB</label>
+  <input name="dob" type="text" class="form-control" ">
+</div>
+<div class="form-group">
+  <label >EMAIL</label>
+  <input type="text" name="email" class="form-control" ">
+</div>
+<div class="form-group">
+  <label >PH</label>
+  <input type="text" name="ph" class="form-control" ">
+</div>
+<div class="form-group">
+    
+		<p>
+			<input type="file" name="file" autocomplete="off" required>
+		</p>
+   
+   
+</div>
+<input type="submit" class="btn btn-sucess" value="Submit">
+</form>
+</body>
+
+</html>
